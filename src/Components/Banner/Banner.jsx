@@ -1,10 +1,11 @@
 import imgBanner from "../../assets/imagens/banner.png";
+import './Banner.css'
 
 function Banner() {
     return (
-        <>
-          <img src={imgBanner} alt="" />
-        </>
+        <header className="banner">
+          <img src={imgBanner} alt="Banner principal da pagina organo" />
+        </header>
     )
 }
 
