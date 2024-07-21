@@ -1,8 +1,8 @@
 import React from 'react'
 import './Button.css'
 
-export default function Button() {
+export default function Button({texto}) {
   return (
-    <button>Criar card</button>
+    <button>{texto}</button>
   )
 }

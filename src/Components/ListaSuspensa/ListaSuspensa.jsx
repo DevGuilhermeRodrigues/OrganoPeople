@@ -1,14 +1,13 @@
 import React from 'react'
 import './ListaSuspensa.css'
 
-export default function ListaSuspensa({label, times}) {
-    console.log(times)
+export default function ListaSuspensa({mandatory, label, times, valor, aoAlterado}) {
   return (
     <div className='containerlistaSuspensa'>
         <label>{label}</label>
-        <select>
+        <select onChange={event => aoAlterado(event.target.value)} required={mandatory} value={valor}>
            {times.map( time => (
-             <option>{time}</option>
+             <option key={time}>{time}</option>
            ))}
         </select>
     </div>
