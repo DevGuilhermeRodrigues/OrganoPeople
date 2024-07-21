@@ -1,5 +1,5 @@
 import Banner from "./Components/Banner/Banner"
-import CampoTexto from "./Components/CampoTexto/CampoTexto"
+import Formulario from "./Components/Formulario/Formulario"
 import './style.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Banner />
-      <CampoTexto />
+      <Formulario />
     </>
   )
 }

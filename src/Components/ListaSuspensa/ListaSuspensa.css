@@ -1,4 +1,8 @@
-.campoTexto label {
+.containerlistaSuspensa {
+    margin: 15px 0;
+}
+
+.containerlistaSuspensa label {
     display: block;
     font-size: 18px;
     font-weight: bold;
@@ -6,11 +10,9 @@
     margin: 15px 0 5px 0px;
 }
 
-.campoTexto input {
-    font-size: 16px;
-    font-weight: 400;
-    padding: 14px;
+.containerlistaSuspensa select {
+    font-size: 15px;
     width: 100%;
+    padding: 1em;
     box-shadow: 10px 10px 30px 0px #0000000F;
-
 }
