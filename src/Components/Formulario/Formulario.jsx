@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa'
 import './Formulario.css'
 
-export default function Formulario() {
+export default function Formulario({colaboradorAdicionado}) {
  
   const times = [
       'Programação',
@@ -23,10 +23,13 @@ export default function Formulario() {
 
   const handlerSubmit = (event) => {
      event.preventDefault()
-     console.log('Card Criado')
-     console.log(nome, cargo)
-     console.log(imagem)
-     console.log(time)
+
+     colaboradorAdicionado({
+        nome,
+        cargo,
+        imagem,
+        time
+     })
   }
 
   return (
