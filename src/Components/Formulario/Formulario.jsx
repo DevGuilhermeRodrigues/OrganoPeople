@@ -4,17 +4,7 @@ import Button from '../Button/Button'
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa'
 import './Formulario.css'
 
-export default function Formulario({colaboradorAdicionado}) {
- 
-  const times = [
-      'Programação',
-      'Front-End',
-      'Data Science',
-      'Devops',
-      'UX e Design',
-      'Mobile',
-      'Inovação e Gestão'
-  ]
+export default function Formulario({colaboradorAdicionado, times}) {
 
   const [nome, setNome] = useState('')
   const [cargo, setCargo] = useState('')

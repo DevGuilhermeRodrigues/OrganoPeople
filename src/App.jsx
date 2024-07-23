@@ -34,9 +34,7 @@ function App() {
     { time: 'Inovação e Gestão',
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF'
-    },
-    
-
+    }
   ]
   
   const [colaborador, setColaborador] = useState([])
@@ -49,24 +47,21 @@ function App() {
   return (
     <>
       <Banner />
-      <Formulario colaboradorAdicionado={colaboradores => aoNovoColaboradorAdicionado(colaboradores)} />
+
+      <Formulario 
+         times={times.map( times => times.time)} 
+         colaboradorAdicionado={colaboradores => aoNovoColaboradorAdicionado(colaboradores)} 
+      />
 
       {times.map( time => (
         <Time  
           key={time.time} 
           time={time.time}
           corPrimaria={time.corPrimaria}
-          corSecundaria={time.corSecundaria} 
+          corSecundaria={time.corSecundaria}
+          colaboradores={colaborador.filter( colaborador => colaborador.time === time.nome)} 
         />
       ))} 
-       
-      {/* <Time time="Programação" />
-      <Time time="Front-End" />
-      <Time time="Data Science" />
-      <Time time="Devops" />
-      <Time time="UX e Design" />
-      <Time time="Mobile" />
-      <Time time="Inovação e Gestão" /> */}
     </>
   )
 }
