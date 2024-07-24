@@ -1,0 +1,35 @@
+.containerFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6278F7;
+    padding: 20px 2em;
+}
+
+.containerFooter div {
+    width: 300px;
+}
+
+.containerFooter ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.containerFooter ul li {
+    margin: 0 10px;
+}
+
+.containerFooter ul img {
+   width: 20px;
+   height: 20px;
+}
+
+.containerFooter img {
+    width: 120px;
+}
+
+.containerFooter a {
+    color: white;
+    text-decoration: none;
+}

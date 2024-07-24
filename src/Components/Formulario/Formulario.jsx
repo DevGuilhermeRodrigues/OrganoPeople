@@ -18,13 +18,18 @@ export default function Formulario({colaboradorAdicionado, times}) {
         nome,
         cargo,
         imagem,
-        time
+        time 
      })
+
+     setNome('')
+     setCargo('')
+     setImagem('')
+     setTime(time[0])
   }
 
   return (
-    <section className='containerForm' onSubmit={handlerSubmit}>
-        <form>
+    <section className='containerForm'>
+        <form onSubmit={handlerSubmit}>
           <h2 className='tituloForm'>Preencha os dados para criar o card do colaborador.</h2>
           <CampoTexto 
               mandatory={true} 
@@ -46,7 +51,7 @@ export default function Formulario({colaboradorAdicionado, times}) {
 
           <CampoTexto 
               type="texto" 
-              placeholder="Informe o endereço da imagem" 
+              placeholder="Informe o endereço da imagem ex: http://github.com/nomedeusuario.png" 
               label="Imagem"
               valor={imagem}
               aoAlterado={valor => setImagem(valor)} 
